@@ -1,0 +1,37 @@
+{
+  "name": "pawpetstore-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PawPetStore - Premium pet marketplace & pet-care platform",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "start": "npm run start --workspace=frontend",
+    "lint": "npm run lint --workspace=frontend",
+    "typecheck": "npm run typecheck --workspace=frontend",
+    "test": "tsx tests/smoke.test.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:seed": "tsx prisma/seed.ts"
+  },
+  "keywords": [
+    "petstore",
+    "marketplace",
+    "petcare",
+    "nextjs",
+    "prisma"
+  ],
+  "author": "lohithpahuja03",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.24",
+    "prisma": "^6.4.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

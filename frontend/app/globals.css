@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+:root {
+  /* PawPetStore Light Theme Design Tokens */
+  --bg-app: #FAF8F5;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-subtle: #F4EFEA;
+  --bg-muted: #ECE5DC;
+
+  --color-primary: #1B4332;
+  --color-primary-hover: #143527;
+  --color-primary-light: #E8F4EE;
+  --color-primary-focus: rgba(27, 67, 50, 0.18);
+
+  --color-secondary: #D9A066;
+  --color-secondary-hover: #C58B52;
+  --color-secondary-light: #FAF2E9;
+
+  --color-accent: #E07A5F;
+  --color-accent-hover: #C9674D;
+  --color-accent-light: #FBECE8;
+
+  --text-main: #1C2421;
+  --text-secondary: #4A5550;
+  --text-muted: #738078;
+  --text-inverted: #FFFFFF;
+
+  --border-main: #E2DBD2;
+  --border-light: #EFECE6;
+  --border-focus: #1B4332;
+
+  --status-success: #2D6A4F;
+  --status-success-bg: #EAF4EE;
+  --status-warning: #D97706;
+  --status-warning-bg: #FEF3C7;
+  --status-error: #DC2626;
+  --status-error-bg: #FEE2E2;
+  --status-info: #0284C7;
+  --status-info-bg: #E0F2FE;
+
+  --shadow-sm: 0 1px 2px 0 rgba(28, 36, 33, 0.05);
+  --shadow-md: 0 4px 12px -2px rgba(28, 36, 33, 0.08), 0 2px 6px -1px rgba(28, 36, 33, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(28, 36, 33, 0.1), 0 4px 12px -2px rgba(28, 36, 33, 0.05);
+  --shadow-card: 0 2px 8px rgba(27, 67, 50, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+.dark {
+  /* PawPetStore Dark Theme Design Tokens */
+  --bg-app: #0D1412;
+  --bg-surface: #141F1C;
+  --bg-card: #172420;
+  --bg-subtle: #1C2C27;
+  --bg-muted: #243731;
+
+  --color-primary: #4BB787;
+  --color-primary-hover: #5FC598;
+  --color-primary-light: #162E24;
+  --color-primary-focus: rgba(75, 183, 135, 0.25);
+
+  --color-secondary: #E3B27E;
+  --color-secondary-hover: #F0C494;
+  --color-secondary-light: #2A2318;
+
+  --color-accent: #F08C73;
+  --color-accent-hover: #FA9F88;
+  --color-accent-light: #331F1A;
+
+  --text-main: #F3F7F5;
+  --text-secondary: #B6C4BC;
+  --text-muted: #7E9086;
+  --text-inverted: #0D1412;
+
+  --border-main: #253831;
+  --border-light: #1B2C26;
+  --border-focus: #4BB787;
+
+  --status-success: #52B788;
+  --status-success-bg: #142E22;
+  --status-warning: #FBBF24;
+  --status-warning-bg: #30240E;
+  --status-error: #F87171;
+  --status-error-bg: #351515;
+  --status-info: #38BDF8;
+  --status-info-bg: #102636;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 14px -2px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 30px -4px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  min-height: 100vh;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-main);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Utility Design Classes */
+.bg-app { background-color: var(--bg-app); }
+.bg-surface { background-color: var(--bg-surface); }
+.bg-card-custom { background-color: var(--bg-card); }
+.bg-subtle-custom { background-color: var(--bg-subtle); }
+.bg-muted-custom { background-color: var(--bg-muted); }
+
+.text-main { color: var(--text-main); }
+.text-secondary-custom { color: var(--text-secondary); }
+.text-muted-custom { color: var(--text-muted); }
+
+.border-main-custom { border-color: var(--border-main); }
+.border-light-custom { border-color: var(--border-light); }
+
+.brand-primary { color: var(--color-primary); }
+.bg-brand-primary { background-color: var(--color-primary); }
+.bg-brand-primary-light { background-color: var(--color-primary-light); }
+.brand-accent { color: var(--color-accent); }
+.bg-brand-accent { background-color: var(--color-accent); }
